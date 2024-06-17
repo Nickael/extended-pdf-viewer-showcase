@@ -1,10 +1,14 @@
+@import 'tippy.js/dist/tippy.css';
+@import 'tippy.js/themes/light.css';
+@import 'tippy.js/animations/scale.css';
+
 @import '~perfect-scrollbar/css/perfect-scrollbar.css';
 @import "~@fontsource/roboto/300.css";
 @import "~@fontsource/roboto/400.css";
 @import "~@fontsource/roboto/500.css";
 @import "~@fontsource/material-icons/index.css";
 
-.mat-mdc-radio-button .mdc-radio  {
+.mat-mdc-radio-button .mdc-radio {
   --mdc-radio-state-layer-size: 30px !important;
 }
 
@@ -22,8 +26,8 @@
 }
 
 .mat-mdc-list-base {
-    --mdc-list-list-item-label-text-tracking: 0;
-    --mdc-list-list-item-trailing-supporting-text-tracking: 0;
+  --mdc-list-list-item-label-text-tracking: 0;
+  --mdc-list-list-item-trailing-supporting-text-tracking: 0;
 }
 
 .mat-mdc-radio-button .mdc-form-field,
@@ -35,6 +39,7 @@
 html {
   height: 100%;
 }
+
 body {
   margin: 0;
   font-family: Roboto, 'Helvetica Neue', sans-serif;
@@ -105,21 +110,25 @@ dd {
   box-sizing: border-box;
   padding: 10px;
 }
+
 dd ~ dt,
 dd ~ dd {
   border-top: 1px solid #bdc8ca;
 }
+
 dt {
   float: left;
   width: 35%;
   padding-bottom: 0;
   font-size: 110%;
 }
+
 dd {
   margin-left: 35%;
   border-left: 1px dotted #bdc8ca;
   background-color: #fff;
 }
+
 dd:after {
   content: '';
   display: block;

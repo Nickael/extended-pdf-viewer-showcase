@@ -1,13 +1,13 @@
-import { NgxExtendedPdfViewerService, PageRenderedEvent, pdfDefaultOptions } from 'ngx-extended-pdf-viewer';
+// tslint:disable:variable-name
+import { NgxExtendedPdfViewerService, PageRenderedEvent, pdfDefaultOptions, TextLayerRenderedEvent } from 'ngx-extended-pdf-viewer';
 import { Component, ViewEncapsulation } from '@angular/core';
-import { TextLayerRenderedEvent } from 'ngx-extended-pdf-viewer';
 import { isLocalhost } from '../common/utilities';
 
 @Component({
   selector: 'app-textlayer',
   templateUrl: './textlayer.component.html',
-  styleUrls: ['./textlayer.component.css'],
-  encapsulation: ViewEncapsulation.None,
+  styleUrls: [ './textlayer.component.css' ],
+  encapsulation: ViewEncapsulation.None
 })
 export class TextlayerComponent {
   public _markLongWords = false;
@@ -73,8 +73,8 @@ export class TextlayerComponent {
   }
 
   private markOneLongWord(word: string): string {
-    if (word.length > 6) {
-      return `<div class="long-word">${word}</div>`;
+    if (word === 'Preliminary') {
+      return `<div class="long-word">${ word }</div>`;
     }
     return word;
   }

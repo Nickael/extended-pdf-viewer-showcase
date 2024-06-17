@@ -3,20 +3,14 @@ import { Component, Input, OnInit } from '@angular/core';
 @Component({
   selector: 'app-ie11-markdown',
   templateUrl: './ie11-markdown.component.html',
-  styleUrls: ['./ie11-markdown.component.css']
+  styleUrls: [ './ie11-markdown.component.css' ]
 })
 export class Ie11MarkdownComponent implements OnInit {
+  @Input() data: any;
 
-  @Input()
-  public data: any;
+  @Input() src!: string;
 
-  @Input()
-  public src!: string;
-
-  public isIE11 = typeof window === 'undefined' ? false : !!(<any>window).MSInputMethodContext && !!(<any>document).documentMode;
-
-
-  constructor() { }
+  isIE11: boolean = typeof window === 'undefined' ? false : !!(window as any).MSInputMethodContext && !!(document as any).documentMode;
 
   ngOnInit(): void {
   }
